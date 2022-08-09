@@ -56,7 +56,6 @@ router.post("/list", (req, res, next) => {
     };
   }
   let goodsModel = Goods.find(params).limit(pageSize);
-  console.log(goodsModel,88888888888888);
 
   goodsModel.sort({ productPrice: sort });
   goodsModel.exec((err, doc) => {

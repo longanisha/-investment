@@ -47,9 +47,7 @@ new Vue({
 }).$mount("#app");
 
 router.beforeEach((to, from, next) => {
-  console.log(to, 99999999);
   const name = Cookies.get("userId");
-  console.log(name, 777777777);
   if (
     !name &&
     (to.path == "/cart" ||
