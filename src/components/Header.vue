@@ -62,12 +62,11 @@
       <el-menu-item index="2">
         <router-link to="/service"> Visa Appoitment</router-link>
       </el-menu-item>
-    
+
       <el-menu-item index="3" disabled>User Center</el-menu-item>
       <el-menu-item index="4">
-      
-      <router-link to="/">Order History</router-link>
-     </el-menu-item>
+        <router-link to="/">Order History</router-link>
+      </el-menu-item>
     </el-menu>
     <!-- login Popup -->
     <modal :mdShow="mdShowLogin" @close="closeModal">
@@ -198,7 +197,7 @@ export default {
           this.$store.commit("updateUserInfo", "");
           this.$store.commit("initCartCount", 0);
           this.mdShowLogout = true;
-       
+
           this.$router.push("/");
         }
       });
