@@ -30,7 +30,7 @@
             <dd>
               <a
                 href="javascript:void(0)"
-                :class="{ cur: priceChecked == 'all' }"
+                :class="{ cur: priceChecked ==5 }"
                 @click="clickAll"
               >
                 All
@@ -161,7 +161,7 @@ export default {
           endPrice: "5000.00"
         }
       ],
-      priceChecked: "all",
+      priceChecked: 5,
       filterBy: false,
       overLayFlag: false,
       sortFlag: true,
@@ -196,8 +196,11 @@ export default {
       };
       this.loading = true;
       axios
-        .get("/goods/list", {
-          params: param
+        .post("/goods/list", {
+          page: this.page,
+          pageSize: this.pageSize,
+          sort: this.sortFlag ? 1 : -1,
+          priceLevel: this.priceChecked
         })
         .then(res => {
           let data = res.data;
@@ -223,7 +226,7 @@ export default {
         });
     },
     clickAll() {
-      this.priceChecked = "all";
+      this.priceChecked = 5;
       this.getGoodsList();
     },
     sortGoods() {
