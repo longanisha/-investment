@@ -1,6 +1,5 @@
 <template>
   <div class="header">
- 
     <div class="navbar">
       <div class="navbar-left-container">
         <div>
@@ -25,8 +24,6 @@
       </div>
 
       <div class="navbar-menu-container">
-       
-
         <span v-if="nickName">Hi, {{ nickName }}</span>
         <a
           href="javascript:void(0)"
@@ -42,12 +39,11 @@
           v-if="nickName"
           >Log Out</a
         >
-      
+
         <el-badge :value="cartCount" class="item">
           <a href="#" @click="openCart">
             <i class="el-icon-shopping-cart-1"></i>
           </a>
-
         </el-badge>
       </div>
     </div>
@@ -61,31 +57,17 @@
       active-text-color="#ffd04b"
     >
       <el-menu-item index="1">
-       <router-link to="/">Investment immigration</router-link>
-     </el-menu-item>
+        <router-link to="/">Investment immigration</router-link>
+      </el-menu-item>
       <el-menu-item index="2">
-      <router-link to="/service"> Visa Appoitment</router-link>
-    </el-menu-item>
-      <!-- <el-submenu index="2">
-        <template slot="title"
-          >Visa Appoitment</template
-        >
-        <el-menu-item index="2-1">France</el-menu-item>
-        <el-menu-item index="2-2">Spain</el-menu-item>
-        <el-menu-item index="2-3">Italy</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title"
-            >IRP</template
-          >
-          <el-menu-item index="2-4-1">First Time </el-menu-item>
-          <el-menu-item index="2-4-2">Renewal</el-menu-item>
-         
-        </el-submenu>
-      </el-submenu> -->
+        <router-link to="/service"> Visa Appoitment</router-link>
+      </el-menu-item>
+    
       <el-menu-item index="3" disabled>User Center</el-menu-item>
-      <el-menu-item index="4"
-        ><a href="/" >Order History</a></el-menu-item
-      >
+      <el-menu-item index="4">
+      
+      <router-link to="/">Order History</router-link>
+     </el-menu-item>
     </el-menu>
     <!-- login Popup -->
     <modal :mdShow="mdShowLogin" @close="closeModal">
@@ -166,8 +148,8 @@ export default {
       mdShowLogout: false,
       mdShowLogin: false,
       mdShow: false,
-        activeIndex: '1',
-        activeIndex2: '1'
+      activeIndex: "1",
+      activeIndex2: "1"
     };
   },
   mounted() {
@@ -178,12 +160,11 @@ export default {
   },
   computed: {
     ...mapState(["nickName", "cartCount"])
-   
   },
   methods: {
-     handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      },
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
     getWhatsapp() {
       window.open("https://wa.me/353899540151", "target");
     },
@@ -214,14 +195,13 @@ export default {
     logout() {
       axios.post("/users/logout").then(res => {
         if (res.data.status == "0") {
-          //  this.nickName=""
           this.$store.commit("updateUserInfo", "");
           this.$store.commit("initCartCount", 0);
           this.mdShowLogout = true;
-           this.$router.push("/");
+       
+          this.$router.push("/");
         }
       });
-     
     },
     checkLogin() {
       axios.get("/users/checkLogin").then(res => {

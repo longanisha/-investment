@@ -206,10 +206,10 @@
       </div>
     </div>
     <modal :mdShow="mdDelAddress" @close="closeModal">
-      <p slot="message">是否要Delete此Address？</p>
+      <p slot="message">Confirm to delete this address？</p>
       <div slot="btnGroup">
         <a href="javascript:;" class="btn btn-m" @click="delAddressComfirm"
-          >确认</a
+          >Confirm</a
         >
         <a href="javascript:;" class="btn btn-m" @click="closeModal">Cancel</a>
       </div>

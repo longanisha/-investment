@@ -1,6 +1,5 @@
 <template>
     <div>
-      <nav-header></nav-header>
       <div class="container">
         <div class="page-title-normal">
           <h2 class="page-title-h2"><span>Order Detail</span></h2>
@@ -34,7 +33,6 @@
           </div>
         </div>
       </div>
-      <nav-footer></nav-footer>
     </div>
 </template>
 <script>

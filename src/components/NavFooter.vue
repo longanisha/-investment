@@ -82,7 +82,7 @@ body{ font-family: Arial;}
 .footer{
   background-color: white;
 }
-#map{ margin-bottom: 31px;}
+<!-- #map{ margin-bottom: 31px;} -->
 #map .map_info{ font-size:0; height:79px; border-bottom:1px #e0e0e0 solid; text-align: center; line-height: 79px;}
 #map .map_info a{ font-size:16px; transition: .5s;}
 #map .map_info a:hover{ color:#ff6700;}

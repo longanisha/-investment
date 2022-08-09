@@ -38,7 +38,7 @@ export default new Router({
           component: Cart
         },
         {
-          path: '/Address',
+          path: '/address',
           name: 'Address',
           component: Address
         },

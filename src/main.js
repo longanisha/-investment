@@ -46,16 +46,21 @@ new Vue({
   template: "<App/>"
 }).$mount("#app");
 
-// router.beforeEach((to,from, next) => {
-  
-//   const name = Cookies.get("nickName");
-//   if (!name && to.name == "cart") {
-//     next({
-//       path: '/',    
-//     });
-//   }else {
-//     next()
-//   }
-
-  
-// });
+router.beforeEach((to, from, next) => {
+  console.log(to, 99999999);
+  const name = Cookies.get("userId");
+  console.log(name, 777777777);
+  if (
+    !name &&
+    (to.path == "/cart" ||
+      to.path == "/address" ||
+      to.path == "/orderConfirm" ||
+      to.path == "/orderSuccess")
+  ) {
+    next({
+      path: "/"
+    });
+  } else {
+    next();
+  }
+});
