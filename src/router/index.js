@@ -7,6 +7,7 @@ import OrderConfirm from '@/views/OrderConfirm'
 import OrderSuccess from '@/views/OrderSuccess'
 import Home from '@/views/Home'
 import Swiper from '@/components/SwiperNow'
+import Imigrate from '@/views/Imigrate'
 
 Vue.use(Router)
 
@@ -51,6 +52,11 @@ export default new Router({
           path: '/orderSuccess',
           name: 'OrderSuccess',
           component: OrderSuccess
+        },
+        {
+          path: '/imigrate',
+          name: 'Imigrate',
+          component: Imigrate
         }
       ]
     },

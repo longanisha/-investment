@@ -1,7 +1,7 @@
 <template>
   <el-carousel :interval="4000" type="card">
     <el-carousel-item v-for="(url, index) in urls" :key="index">
-      <el-image :src="url" ></el-image>
+      <el-image :src="url" fit="scale-down"></el-image>
     </el-carousel-item>
   </el-carousel>
 </template>

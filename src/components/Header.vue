@@ -48,24 +48,25 @@
       </div>
     </div>
     <el-menu
-      :default-active="activeIndex2"
+      :default-active="$route.path"
       class="el-menu-demo"
       mode="horizontal"
       @select="handleSelect"
       background-color="#90A955"
       text-color="#fff"
       active-text-color="#ffd04b"
+      router
     >
-      <el-menu-item index="1">
-        <router-link to="/">Investment immigration</router-link>
+      <el-menu-item index="/imigrate" route="/imigrate" >
+        Investment immigration
       </el-menu-item>
-      <el-menu-item index="2">
-        <router-link to="/service"> Visa Appoitment</router-link>
+      <el-menu-item index="/service" route="/service">
+         Visa Appoitment
       </el-menu-item>
 
       <el-menu-item index="3" disabled>User Center</el-menu-item>
-      <el-menu-item index="4">
-        <router-link to="/">Order History</router-link>
+      <el-menu-item index="/" route="/">
+       Order History
       </el-menu-item>
     </el-menu>
     <!-- login Popup -->

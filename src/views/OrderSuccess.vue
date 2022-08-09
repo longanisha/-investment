@@ -4,7 +4,7 @@
         <div class="page-title-normal">
           <h2 class="page-title-h2"><span>Order Detail</span></h2>
         </div>
-        <!-- 进度条 -->
+        <!-- Progress -->
          <div class="check-step">
           <ul>
             <li class="cur"><span>Select</span>Address</li>

@@ -24,7 +24,7 @@ import NavFooter from "@/components/NavFooter";
 import NavBread from "@/components/NavBread";
 import Modal from "@/components/Modal";
 import Swiper from "@/components/SwiperNow";
-import axios from "axios"; //默认到node_modules中遍历
+import axios from "axios";
 import { currency } from "@/util/currency";
 export default {
   data() {
