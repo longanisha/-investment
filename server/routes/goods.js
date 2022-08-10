@@ -122,7 +122,6 @@ router.post("/addCart", (req, res, next) => {
               });
             } else {
               if (doc) {
-                // console.log(doc)
                 doc.productNum = 1;
                 doc.checked = true;
                 userDoc.cartList.push(doc);

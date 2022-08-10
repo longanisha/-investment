@@ -1,6 +1,5 @@
 <template>
   <div>
-    <nav-header></nav-header>
     <nav-bread><span>Address</span></nav-bread>
     <div class="checkout-page">
       <svg
@@ -132,7 +131,7 @@
                   <div class="addr-opration addr-set-default">
                     <a
                       href="javascript:;"
-                      class="addr-set-default-btn"
+                      class="addrset-default-btn"
                       v-if="!item.isDefault"
                       @click="setDefault(item.addressId)"
                       ><i>Set as default address</i></a

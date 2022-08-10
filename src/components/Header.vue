@@ -18,7 +18,7 @@
               src="../../static/wechat.jpg"
               fit="fill"
             ></el-image>
-            <span slot="reference">Wechat</span>
+            <span slot="reference" >Wechat</span>
           </el-popover>
         </div>
       </div>
