@@ -8,6 +8,7 @@ import OrderSuccess from '@/views/OrderSuccess'
 import Home from '@/views/Home'
 import Swiper from '@/components/SwiperNow'
 import Imigrate from '@/views/Imigrate'
+import AdminLogin from '@/views/AdminLogin'
 
 Vue.use(Router)
 
@@ -60,6 +61,10 @@ export default new Router({
         }
       ]
     },
-   
+    {
+      path: '/adminLogin',
+      name: 'AdminLogin',
+      component: AdminLogin,
+    }   
   ]
 })
